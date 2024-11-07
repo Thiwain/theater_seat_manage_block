@@ -14,16 +14,25 @@ function App() {
         { seatId: 'B3', activeStatus: true, selectedStatus: false },
         { seatId: 'C3', activeStatus: false, selectedStatus: false },
     ]);
+
     const rows = [];
     for (let i = 0; i < seatId.length; i += numberOfRows) {
         rows.push(seatId.slice(i, i + numberOfRows));
     }
+
     const handleCheckboxClick = (index: number) => {
         const updatedSeats = seatId.map((seat, i) =>
             i === index ? { ...seat, selectedStatus: !seat.selectedStatus } : seat
         );
         setSeatId(updatedSeats);
     };
+
+    const handleCheckButtonClick = () => {
+        const selectedSeats = seatId.filter(seat => seat.selectedStatus).map(seat => seat.seatId);
+        console.log("Selected Seats:", selectedSeats);
+        alert("Selected Seats: "+selectedSeats);
+    };
+
     return (
         <div align="center">
             {rows.map((row, rowIndex) => (
@@ -43,8 +52,9 @@ function App() {
                 </div>
             ))}
             <br />
-            <button onClick={() => console.log(seatId)}>Check</button>
+            <button onClick={handleCheckButtonClick}>Check</button>
         </div>
     );
 }
+
 export default App;
