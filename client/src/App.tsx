@@ -34,7 +34,7 @@ function App() {
     };
 
     return (
-        <div align="center">
+        <center>
             {rows.map((row, rowIndex) => (
                 <div key={rowIndex} style={{ marginBottom: '10px' }}>
                     {row.map((seat, index) => (
@@ -53,7 +53,7 @@ function App() {
             ))}
             <br />
             <button onClick={handleCheckButtonClick}>Check</button>
-        </div>
+        </center>
     );
 }
 
