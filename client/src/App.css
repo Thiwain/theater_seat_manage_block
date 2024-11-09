@@ -40,3 +40,29 @@
 .read-the-docs {
   color: #888;
 }
+
+.screen {
+  height: 20px;
+  width: 270px;
+  background-color: blue;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.seat-layout-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  /*align-items: center;*/
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
