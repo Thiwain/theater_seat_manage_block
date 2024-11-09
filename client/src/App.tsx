@@ -3,19 +3,6 @@ import './App.css';
 import { mockSeatLayoutLCR, mockSeatLayoutBOX } from "./data";
 import { Section } from "./components/section";
 
-export type Seat = {
-    seatId: string;
-    activeStatus: boolean;
-    selectedStatus: boolean;
-};
-
-export type SectionLayout = {
-    section: string;
-    rows: number;
-    seatsPerRow: number;
-    seats: Seat[];
-};
-
 function App() {
     const [seatLayout, setSeatLayout] = useState<SectionLayout[]>([
         ...mockSeatLayoutLCR,
