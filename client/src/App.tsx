@@ -16,7 +16,6 @@ export type SectionLayout = {
     seats: Seat[];
 };
 
-// Combine LCR and BOX layouts into one array for rendering
 function App() {
     const [seatLayout, setSeatLayout] = useState<SectionLayout[]>([
         ...mockSeatLayoutLCR,
@@ -42,7 +41,6 @@ function App() {
             })
         );
 
-        // Update box layout separately
         setBoxLayout(prevLayout =>
             prevLayout.map(section => {
                 if (section.section === sectionName) {
