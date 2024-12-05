@@ -1,4 +1,3 @@
-import {SectionLayout} from "../../App.tsx";
 import {Row} from "../row";
 
 interface SectionProps {
